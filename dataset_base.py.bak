@@ -81,7 +81,7 @@ def make_graph(relation_str, utterances_num, relations_vocab):
                 rel_list]
 
     rels = []
-    true_num = max(rel_list, key= lambda x:[2])[2]
+    true_num = max(map(lambda x: x[2], rel_list))
     adj_size = true_num + 1 + len(rel_list)
 
     """make graph"""
